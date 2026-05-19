@@ -140,7 +140,7 @@ export default function EditAchievement() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(min(240px, 100%), 1fr))",
               gap: "20px",
               marginBottom: "20px",
             }}
