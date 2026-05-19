@@ -226,7 +226,8 @@ const Certificates = () => {
             background: "#fff",
             borderRadius: "22px",
             padding: "14px",
-            overflowX: "visible",
+            overflowX: "auto",
+            width: "100%",
             position: "relative",
           }}
         >
@@ -244,7 +245,8 @@ const Certificates = () => {
             <table
               style={{
                 width: "100%",
-                borderCollapse: "collapse",
+                minWidth: "850px",
+                borderCollapse: "collapse",     
               }}
             >
               <thead>
