@@ -305,9 +305,23 @@ export default function AdminLayout() {
           flex: 1,
           width: "100%",
           overflowX: "hidden",
+          background: "#fff",
+          padding: "14px",
+          boxSizing: "border-box",
         }}
       >
-        <Outlet />
+        <div
+          style={{
+            background: "#c8d8e8",
+            borderRadius: "28px",
+            minHeight: "calc(100vh - 28px)",
+            width: "100%",
+            boxSizing: "border-box",
+            overflowX: "hidden",
+          }}
+        >
+          <Outlet />
+        </div>
       </div>
 
       {/* RESPONSIVE CSS */}
