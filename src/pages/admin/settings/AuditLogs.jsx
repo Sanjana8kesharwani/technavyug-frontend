@@ -14,7 +14,11 @@ const AuditLogs = () => {
           admin: log.adminId?.name || "Admin",
           action: log.action || "Updated",
           module: log.resource || "System",
-          description: log.details ? JSON.stringify(log.details) : "",
+          description:
+            log.details?.message ||
+            (log.details?.certificateId
+              ? `Certificate ${log.details.certificateId} updated successfully`
+              : "Activity performed"),
           ip: "—",
           date: new Date(log.createdAt).toLocaleString(),
         }));

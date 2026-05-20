@@ -19,6 +19,7 @@ const AddCertificate = () => {
   });
 
   const [preview, setPreview] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
 
   const [errors, setErrors] = useState({});
 
@@ -74,6 +75,7 @@ const AddCertificate = () => {
     }));
 
     setPreview(URL.createObjectURL(file));
+    setSelectedFile(file);
 
     toast.success("Certificate image uploaded");
   };
@@ -128,7 +130,7 @@ const AddCertificate = () => {
     addCertificate({
       id: Date.now(),
       ...formData,
-      image: preview,
+      image: selectedFile,
     });
 
     toast.success("Certificate added successfully");

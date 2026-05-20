@@ -70,7 +70,23 @@ const Certificates = () => {
 
       link.href = url;
 
-      link.download = "certificate.jpg";
+      let extension = "jpg";
+      try {
+        const urlObj = new URL(file);
+        const pathname = urlObj.pathname;
+        const ext = pathname.split(".").pop()?.toLowerCase();
+        if (ext && ["jpg", "jpeg", "png", "pdf"].includes(ext)) {
+          extension = ext;
+        }
+      } catch (e) {
+        if (file.toLowerCase().endsWith(".pdf") || file.toLowerCase().includes(".pdf")) {
+          extension = "pdf";
+        } else if (file.toLowerCase().endsWith(".png")) {
+          extension = "png";
+        }
+      }
+
+      link.download = `certificate.${extension}`;
 
       document.body.appendChild(link);
 
@@ -82,7 +98,7 @@ const Certificates = () => {
 
       toast.success("Download started");
     } catch {
-      toast.open("Download failed, opening file in new tab instead");
+      toast("Opening file in new tab...");
       window.open(file, "_blank");
     }
   };
@@ -271,6 +287,7 @@ const Certificates = () => {
 
               <tbody>
                 {filteredCertificates.map((certificate, idx) => (
+                  
                   <tr
                     key={certificate._id || certificate.id || idx}
                     style={{

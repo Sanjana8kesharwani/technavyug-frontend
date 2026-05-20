@@ -40,6 +40,7 @@ const EditCertificate = () => {
   });
 
   const [preview, setPreview] = useState(existing?.certificateFile || existing?.image || null);
+  const [selectedFile, setSelectedFile] = useState(null);
 
   useEffect(() => {
     if (existing) {
@@ -110,6 +111,7 @@ const EditCertificate = () => {
     }));
 
     setPreview(URL.createObjectURL(file));
+    setSelectedFile(file);
 
     toast.success("Certificate uploaded successfully");
   };
@@ -164,7 +166,7 @@ const EditCertificate = () => {
     updateCertificate({
       ...existing,
       ...formData,
-      image: preview,
+      image: selectedFile || preview,
     });
 
     toast.success("Certificate updated successfully");
