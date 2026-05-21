@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
-import { LuLinkedin, LuInstagram, LuMail, LuYoutube } from "react-icons/lu";
+import {
+  LuLinkedin,
+  LuInstagram,
+  LuMail,
+  LuYoutube,
+  LuFacebook,
+} from "react-icons/lu";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -53,6 +60,26 @@ const Footer = () => {
                 className="p-2 bg-white/5 rounded-lg hover:bg-cyan-600 hover:text-white transition"
               >
                 <LuInstagram />
+              </a>
+
+              {/* X (Twitter) */}
+              <a
+                href="https://x.com/Technavyug17"
+                target="_blank"
+                rel="noreferrer"
+                className="p-2 bg-white/5 rounded-lg hover:bg-cyan-600 hover:text-white transition"
+              >
+                <FaXTwitter />
+              </a>
+
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/profile.php?id=61589980601965"
+                target="_blank"
+                rel="noreferrer"
+                className="p-2 bg-white/5 rounded-lg hover:bg-cyan-600 hover:text-white transition"
+              >
+                <LuFacebook />
               </a>
             </div>
           </div>

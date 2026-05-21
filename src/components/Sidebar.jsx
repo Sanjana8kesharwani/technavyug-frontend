@@ -106,7 +106,8 @@ const Sidebar = ({ open, setOpen }) => {
         </div>
 
         {/* SOCIAL ICONS */}
-        <div className="flex gap-5 px-5 sm:px-6 pb-6 mt-2 text-gray-600 flex-wrap">
+        {/* SOCIAL ICONS */}
+        <div className="flex items-center gap-4 px-5 sm:px-6 pb-6 mt-2 text-gray-600 flex-wrap">
           {/* LINKEDIN */}
           <a
             href="https://www.linkedin.com/company/technavyug/posts/?feedView=all"
@@ -173,6 +174,34 @@ const Sidebar = ({ open, setOpen }) => {
               className="w-6 h-6 hover:text-pink-500 transition cursor-pointer"
             >
               <path d="M7.75 2C4.68 2 2 4.68 2 7.75v8.5C2 19.32 4.68 22 7.75 22h8.5C19.32 22 22 19.32 22 16.25v-8.5C22 4.68 19.32 2 16.25 2h-8.5zm0 2h8.5C18.22 4 20 5.78 20 7.75v8.5c0 1.97-1.78 3.75-3.75 3.75h-8.5C5.78 20 4 18.22 4 16.25v-8.5C4 5.78 5.78 4 7.75 4zm8.75 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z" />
+            </svg>
+          </a>
+
+          {/* X (TWITTER) */}
+          <a href="https://x.com/Technavyug17" target="_blank" rel="noreferrer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-6 h-6 hover:text-black transition cursor-pointer"
+            >
+              <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.847h-7.406l-5.8-7.584-6.639 7.584H.474l8.6-9.83L0 1.153h7.594l5.243 6.932L18.901 1.153zm-1.292 19.494h2.039L6.486 3.24H4.298l13.311 17.407z" />
+            </svg>
+          </a>
+
+          {/* FACEBOOK */}
+          <a
+            href="https://www.facebook.com/profile.php?id=61589980601965"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-6 h-6 hover:text-blue-600 transition cursor-pointer"
+            >
+              <path d="M22 12.073C22 6.505 17.523 2 12 2S2 6.505 2 12.073c0 5.022 3.657 9.184 8.438 9.927v-7.026H7.898v-2.9h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.196 2.238.196v2.46h-1.26c-1.243 0-1.63.774-1.63 1.567v1.884h2.773l-.443 2.9h-2.33V22C18.343 21.257 22 17.095 22 12.073z" />
             </svg>
           </a>
         </div>
